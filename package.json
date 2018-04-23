@@ -1,0 +1,22 @@
+{
+  "name": "n-blog-project",
+  "version": "1.0.0",
+  "description": "A blog project based on Node which is used to practice the development process and experience the spirit of DevOps.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daviddwlee84/N-blog-Project.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "David Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/daviddwlee84/N-blog-Project/issues"
+  },
+  "homepage": "https://github.com/daviddwlee84/N-blog-Project#readme"
+}
