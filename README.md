@@ -1,2 +1,29 @@
-# N-blog-Project
-A blog project based on Node which is used to practice the development process and experience the spirit of DevOps.
+# N-blog Project
+
+## Topics
+* [Github Flow](https://guides.github.com/introduction/flow/)
+* Unit Testing
+* CI (Contunuous Integration)
+* CD (Continuous Delivery & Continuous Deployment)
+
+## Built With
+### Development
+* [CircleCI](https://circleci.com) - Continuous Integration
+* [AWS](https://aws.amazon.com) - Web server
+* [Docker](https://www.docker.com) - Clean and Same development environment
+* [Jest](https://facebook.github.io/jest/) - Unit testing
+
+### Web Application
+* [Node.js](https://nodejs.org/en/) - JavaScript run-time environment
+* [MongoDB](https://www.mongodb.com) - NoSQL Database
+* [Express](https://github.com/expressjs/express/) - Web application framework
+
+## Author
+* David Lee
+
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+* [Tom Chang](https://github.com/trylovetom)
+* [N-blog](https://github.com/nswbmw/N-blog)
