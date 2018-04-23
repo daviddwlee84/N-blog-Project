@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/daviddwlee84/N-blog-Project/issues"
   },
-  "homepage": "https://github.com/daviddwlee84/N-blog-Project#readme"
+  "homepage": "https://github.com/daviddwlee84/N-blog-Project#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
 }
