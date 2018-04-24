@@ -18,9 +18,22 @@
 * [MongoDB](https://www.mongodb.com) - NoSQL Database
 * [Express](https://github.com/expressjs/express/) - Web application framework
 
-#### Other Node Packages (Tools)
+#### Other Node Packages, Tools, whatever
 * ejs - Template Engine
 * supervisor - Automatically reload
+
+## File Structure
+### Main Directory
+* index.js
+* README.md
+* LICENSE
+
+### ./routes - express.Router
+* index.js
+* users.js
+
+### ./views - Template Engine using ejs
+* users.ejs
 
 ## Author
 * David Lee
