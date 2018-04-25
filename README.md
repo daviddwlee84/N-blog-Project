@@ -47,6 +47,9 @@
 * README.md
 * LICENSE
 
+### ./config - Configuration files
+* default.js - Setting port, session, mongodb
+
 ### ./models - Database operating files
 
 ### ./public - Static files (e.g. CSS, images)
@@ -54,6 +57,40 @@
 ### ./routes - Routing files
 
 ### ./views - Template files
+
+## Function and Router Design
+**#TODO: Follow RESTful API Style**
+
+1. Sign up
+	* Sign up page: `GET /signup`
+	* Sign up (upload profile) : `POST /signup`
+
+2. Sign in
+	* Sign in page: `GET /signin`
+	* Sign in: `POST /signin`
+
+3. Sign out
+	* Sign out: `GET /signout`
+
+4. View Article
+	* Main page: `GET /posts`
+	* Personal Profile: `GET /posts?author=xxx`
+	* View article (include comments): `GET /posts/:postId`
+
+5. Post Article
+	* Post article page: `GET /posts/create`
+	* Post article: `POST /posts/create`
+	
+6. Edit Article
+	* Edit article page: `GET /posts/:postId/edit`
+	* Edit article: `POST /posts/:postId/edit`
+
+7. Delete Article
+	* Delete article: `GET /posts/:postId/remove`
+
+8. Comment
+	* Create comment: `POST /comments`
+	* Delete comment: `GET /comments/:commentId/remove`
 
 ## Tools
 
