@@ -60,10 +60,16 @@
 ### Testing
 
 * `supervisor` - Monitoring and running node.js
+* `jest` - Unit testing
 
 ### Development
 
 * [ESLint](https://eslint.org) - Linting utility for JS
+	* Pupular style guide
+		* [Google](https://google.github.io/styleguide/javascriptguide.xml)
+		* [Airbnb](https://github.com/airbnb/javascript)
+		* [Standard](https://standardjs.com/rules-zhtw.html) <- Using this recently
+
 * [EditorConfig](http://editorconfig.org) - Maintain consistent coding style
 
 ## Author
