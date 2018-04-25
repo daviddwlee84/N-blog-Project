@@ -48,7 +48,12 @@
 * LICENSE
 
 ### ./config - Configuration files
+
 * default.js - Setting port, session, mongodb
+
+### ./middlewares - Custom middlewares
+
+* check.js - Check user log in status
 
 ### ./models - Database operating files
 
