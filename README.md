@@ -61,6 +61,13 @@
 
 ### ./routes - Routing files
 
+* index.js
+* posts.js
+* comments.js
+* signin.js
+* signup.js
+* signout.js
+
 ### ./views - Template files
 
 ## Function and Router Design
