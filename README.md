@@ -59,6 +59,10 @@
 
 ### ./public - Static files (e.g. CSS, images)
 
+#### ./public/css - Cascading style sheets
+
+* style.css
+
 ### ./routes - Routing files
 
 * index.js
@@ -69,6 +73,15 @@
 * signout.js
 
 ### ./views - Template files
+
+* header.ejs
+* footer.ejs
+
+#### ./views/components - Reusable template fragments
+
+* nav.ejs
+* nav-setting.ejs
+* notification.ejs
 
 ## Function and Router Design
 **#TODO: Follow RESTful API Style**
@@ -105,6 +118,11 @@
 	* Delete comment: `GET /comments/:commentId/remove`
 
 ## Tools
+
+### Front-End Design
+
+* [jQuery](https://jquery.com) - Simplify the client-side scripting of HTML
+* [Semantic UI](https://semantic-ui.com) - UI component framework
 
 ### Testing
 

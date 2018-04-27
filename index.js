@@ -33,10 +33,24 @@ app.use(session({
 // flash middleware. Used to show notification
 app.use(flash())
 
+// Configure template global constant
+app.locals.blog = {
+  title: pkg.name,
+  description: pkg.description
+}
+
+// Adding three necessary template variable
+app.use(function (req, res, next) {
+  res.locals.user = req.session.user
+  res.locals.success = req.flash('success').toString()
+  res.locals.error = req.flash('error').toString()
+  next()
+})
+
 // Router
 routes(app)
 
-// Lissening Port and Start Program
+// Listening Port and Start Program
 app.listen(config.port, function () {
   console.log(`${pkg.name} listening on port ${config.port}`)
 })
