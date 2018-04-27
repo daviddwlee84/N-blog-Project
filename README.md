@@ -32,7 +32,7 @@
 * `config-lite` - Read configure files
 * `marked` - Analysis markdown
 * `moment` - Time format
-* `mongolass` - Mongodb driver
+* [`mongolass`](https://github.com/mongolass/mongolass) - Mongodb driver ([author article](https://zhuanlan.zhihu.com/p/24308524))
 * `objectid-to-timestamp` - Generate time stamp based on ObjectId
 * `sha1` - sha1 encoding for password encoding
 * `winston` - log
@@ -50,6 +50,10 @@
 ### ./config - Configuration files
 
 * default.js - Setting port, session, mongodb
+
+### ./lib
+
+* mongo.js - MongoLass setting
 
 ### ./middlewares - Custom middlewares
 
