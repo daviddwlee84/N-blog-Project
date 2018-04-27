@@ -6,7 +6,7 @@ const checkLogin = require('../middlewares/check').checkLogin
 // GET /posts All users or specific user's article page
 //   eg: GET /posts?author=xxx
 router.get('/', function (req, res, next) {
-  res.send('Main Page')
+  res.render('posts')
 })
 
 // POST /posts/create Create an article

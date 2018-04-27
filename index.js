@@ -47,6 +47,12 @@ app.use(function (req, res, next) {
   next()
 })
 
+// Middleware handles forms and document uploading
+app.use(require('express-formidable')({
+  uploadDir: path.join(__dirname, 'public/img'), // Document uploading directory
+  keepExtensions: true // Keep filename exentsion (e.g. *.jpeg, *.png)
+}))
+
 // Router
 routes(app)
 

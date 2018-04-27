@@ -1,6 +1,9 @@
 # Vim
 *.swp
 
+# Uploaded image
+public/img/upload*
+
 # Logs
 logs
 *.log

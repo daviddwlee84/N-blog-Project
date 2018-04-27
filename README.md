@@ -66,6 +66,8 @@
 
 ### ./models - Database operating files
 
+* users.js
+
 ### ./public - Static files (e.g. CSS, images)
 
 #### ./public/css - Cascading style sheets
@@ -79,6 +81,7 @@
 * comments.js
 * signin.js
 * signup.js
+  * #TODO: Make avatar unnecessary information (replaced with default picture according to the gender)
 * signout.js
 
 ### ./views - Template files
@@ -86,6 +89,7 @@
 * header.ejs
 * footer.ejs
 * signup.ejs
+* posts.ejs - Main page
 
 #### ./views/components - Reusable template fragments
 
