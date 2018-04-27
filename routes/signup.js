@@ -17,7 +17,7 @@ router.post('/', checkNotLogin, function (req, res, next) {
   const name = req.fields.name
   const gender = req.fields.gender
   const bio = req.fields.bio
-  const avatar = req.files.avatar.path.split(path.sep).pop()
+  let avatar = req.files.avatar.path.split(path.sep).pop()
   let password = req.fields.password
   const repassword = req.fields.repassword
 
@@ -31,9 +31,6 @@ router.post('/', checkNotLogin, function (req, res, next) {
     }
     if (!(bio.length >= 1 && bio.length <= 100)) {
       throw new Error('Bio length is limited in 1~100 characters')
-    }
-    if (!req.files.avatar.name) {
-      throw new Error('Missing avatar')
     }
     if (password.length < 6) {
       throw new Error('Password length must be at least 6 characters')
@@ -50,6 +47,15 @@ router.post('/', checkNotLogin, function (req, res, next) {
 
   // Plaintext password encryption
   password = sha1(password)
+
+  // If user don't upload avatar
+  if (!req.files.avatar.name) {
+    if (gender === 'f') {
+      avatar = 'UnknownWoman.png'
+    } else {
+      avatar = 'UnknownMan.png'
+    }
+  }
 
   // User information to be written to the database
   let user = {

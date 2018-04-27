@@ -81,7 +81,6 @@
 * comments.js
 * signin.js
 * signup.js
-  * #TODO: Make avatar unnecessary information (replaced with default picture according to the gender)
 * signout.js
 
 ### ./views - Template files
