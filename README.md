@@ -28,7 +28,7 @@
 * `connect-mongo` - Store session in mongodb (work with express-session)
 * `connect-flash` - Page information middleware. Based on session
 * `ejs` - Template Engine
-* `express-formidable` - Middleware of receiving form and document upload
+* [`express-formidable`](https://www.npmjs.com/package/express-formidable) - Handling form (including document upload)
 * `config-lite` - Read configure files
 * `marked` - Analysis markdown
 * `moment` - Time format
@@ -85,6 +85,7 @@
 
 * header.ejs
 * footer.ejs
+* signup.ejs
 
 #### ./views/components - Reusable template fragments
 
