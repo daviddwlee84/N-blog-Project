@@ -4,7 +4,7 @@ const express = require('express')
 const session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
 const flash = require('connect-flash')
-const config = require('./config/config.json')
+const config = require('./config/default')
 const routes = require('./routes')
 const pkg = require('./package')
 
