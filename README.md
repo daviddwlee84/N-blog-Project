@@ -29,7 +29,6 @@
 * `connect-flash` - Page information middleware. Based on session
 * `ejs` - Template Engine
 * [`express-formidable`](https://www.npmjs.com/package/express-formidable) - Handling form (including document upload)
-* `config-lite` - Read configure files
 * `marked` - Analysis markdown
 * `moment` - Time format
 * [`mongolass`](https://github.com/mongolass/mongolass) - Mongodb driver ([author article](https://zhuanlan.zhihu.com/p/24308524))
@@ -49,7 +48,7 @@
 
 ### ./config - Configuration files
 
-* default.js - Setting port, session, mongodb
+* config.json - Setting port, session, mongodb
 
 ### ./lib
 
