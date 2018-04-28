@@ -4,6 +4,8 @@ const sha1 = require('sha1')
 const express = require('express')
 const router = express.Router()
 
+const signupString = require('../strings/signup.json')
+
 const UserModel = require('../models/users')
 const checkNotLogin = require('../middlewares/check').checkNotLogin
 
@@ -24,19 +26,19 @@ router.post('/', checkNotLogin, function (req, res, next) {
   // Testing input parameters
   try {
     if (!(name.length >= 1 && name.length <= 20)) {
-      throw new Error('Username length is restricted between 1~20 characters')
+      throw new Error(signupString.error.username)
     }
     if (['m', 'f', 'x'].indexOf(gender) === -1) {
-      throw new Error('Gender can only be m, f or x')
+      throw new Error(signupString.error.gender)
     }
     if (!(bio.length >= 1 && bio.length <= 100)) {
-      throw new Error('Bio length is limited in 1~100 characters')
+      throw new Error(signupString.error.bio)
     }
     if (password.length < 6) {
-      throw new Error('Password length must be at least 6 characters')
+      throw new Error(signupString.error.password)
     }
     if (password !== repassword) {
-      throw new Error('Inconsistent password')
+      throw new Error(signupString.error.repassword)
     }
   } catch (e) {
     // Sign up fail, delete avatar asynchronously
@@ -74,7 +76,7 @@ router.post('/', checkNotLogin, function (req, res, next) {
       delete user.password
       req.session.user = user
       // Write into flash
-      req.flash('success', 'Sign up successfully')
+      req.flash('success', signupString.success)
       // Redirect to main page
       res.redirect('/posts')
     })
@@ -83,7 +85,7 @@ router.post('/', checkNotLogin, function (req, res, next) {
       fs.unlink(req.files.avatar.path)
       // Username has been used then redirect to main page instead of error page
       if (e.message.match('duplicate key')) {
-        req.flash('error', 'Userneme has been used')
+        req.flash('error', signupString.fail)
         return res.redirect('/signup')
       }
       next(e)

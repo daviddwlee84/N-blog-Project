@@ -1,0 +1,11 @@
+{
+  "error": {
+    "username": "Username length is restricted between 1~20 characters",
+    "gender": "Gender can only be m, f or x",
+    "bio": "Bio length is limited in 1~100 characters",
+    "password": "Password length must be at least 6 characters",
+    "repassword": "Inconsistent password"
+  },
+  "success": "Sign up successfully",
+  "fail": "Userneme has been used"
+}

@@ -83,6 +83,10 @@
 * signup.js
 * signout.js
 
+### ./strings - String files
+
+* signup.json
+
 ### ./views - Template files
 
 * header.ejs
@@ -141,6 +145,7 @@
 
 * `supervisor` - Monitoring and running node.js
 * `jest` - Unit testing
+* [`supertest`](https://www.npmjs.com/package/supertest) - Work with jest
 
 ### Development
 
