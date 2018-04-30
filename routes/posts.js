@@ -1,6 +1,9 @@
 const express = require('express')
 const router = express.Router()
 
+const PostModel = require('../models/posts')
+const postsString = require('../strings/posts.json')
+
 const checkLogin = require('../middlewares/check').checkLogin
 
 // GET /posts All users or specific user's article page
@@ -11,7 +14,38 @@ router.get('/', function (req, res, next) {
 
 // POST /posts/create Create an article
 router.post('/create', checkLogin, function (req, res, next) {
-  res.send('Create Article')
+  const author = req.session.user._id
+  const title = req.fields.title
+  const content = req.fields.content
+
+  // Check input
+  try {
+    if (!title.length) {
+      throw new Error(postsString.create.error.no_title)
+    }
+    if (!content.length) {
+      throw new Error(postsString.create.error.no_content)
+    }
+  } catch (e) {
+    req.flash('error', e.message)
+    return res.redirect('back')
+  }
+
+  let post = {
+    author: author,
+    title: title,
+    content: content
+  }
+
+  PostModel.create(post)
+    .then(function (result) {
+      // This post is a value inserted after mongodb, including _id
+      post = result.ops[0]
+      req.flash('success', post.create.success)
+      // Redirect to the article page after successfully posting
+      res.redirect(`/posts/${post._id}`)
+    })
+    .catch(next)
 })
 
 // GET /posts/create Create article page
@@ -21,7 +55,9 @@ router.get('/create', checkLogin, function (req, res, next) {
 
 // GET /posts/:postId Single article page
 router.get('/:postId', function (req, res, next) {
-  res.send('Article Detail Page')
+  res.write('Article Detail Page: ')
+  res.write(req.params.postId)
+  res.end()
 })
 
 // GET /posts/:postId/edit Update article page

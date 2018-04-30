@@ -63,6 +63,7 @@
 ### ./models - Database operating files
 
 * users.js
+* posts.js
 
 ### ./public - Static files (e.g. CSS, images)
 

@@ -1,0 +1,9 @@
+{
+  "create": {
+    "error": {
+      "no_title": "Please input title",
+      "no_content": "Please input content"
+    },
+    "success": "Post successfully"
+  }
+}
