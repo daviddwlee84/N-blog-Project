@@ -86,6 +86,7 @@
 
 * signup.json
 * signout.json
+* signin.json
 
 ### ./views - Template files
 

@@ -1,0 +1,9 @@
+{
+  "error": {
+    "no_username": "Please input username",
+    "no_password": "Please input password",
+    "user_undefine": "Username does not exist",
+    "wrong_input": "Username or password is wrong"
+  },
+  "success": "Sign in successfully"
+}
