@@ -4,6 +4,9 @@
 # Uploaded image
 public/img/upload*
 
+# Personal testing file
+tempfiles/
+
 # Logs
 logs
 *.log
