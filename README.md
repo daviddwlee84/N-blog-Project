@@ -89,9 +89,11 @@
 
 * header.ejs
 * footer.ejs
+
 * signup.ejs
 * posts.ejs - Main page
 * signin.ejs
+* create.ejs - Create new post
 
 #### ./views/components - Reusable template fragments
 

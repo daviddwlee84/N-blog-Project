@@ -16,7 +16,7 @@ router.post('/create', checkLogin, function (req, res, next) {
 
 // GET /posts/create Create article page
 router.get('/create', checkLogin, function (req, res, next) {
-  res.send('Create Article Page')
+  res.render('create')
 })
 
 // GET /posts/:postId Single article page
