@@ -93,6 +93,7 @@
 * footer.ejs
 * signup.ejs
 * posts.ejs - Main page
+* signin.ejs
 
 #### ./views/components - Reusable template fragments
 

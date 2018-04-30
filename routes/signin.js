@@ -5,7 +5,7 @@ const checkNotLogin = require('../middlewares/check').checkNotLogin
 
 // GET /signin Sign in page
 router.get('/', checkNotLogin, function (req, res, next) {
-  res.send('Sign In Page')
+  res.render('signin')
 })
 
 // POST /signin User sign in
