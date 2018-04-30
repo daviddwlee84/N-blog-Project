@@ -9,7 +9,15 @@ const checkLogin = require('../middlewares/check').checkLogin
 // GET /posts All users or specific user's article page
 //   eg: GET /posts?author=xxx
 router.get('/', function (req, res, next) {
-  res.render('posts')
+  const author = req.query.author
+
+  PostModel.getPosts(author)
+    .then(function (posts) {
+      res.render('posts', {
+        posts: posts
+      })
+    })
+    .catch(next)
 })
 
 // POST /posts/create Create an article
@@ -41,7 +49,7 @@ router.post('/create', checkLogin, function (req, res, next) {
     .then(function (result) {
       // This post is a value inserted after mongodb, including _id
       post = result.ops[0]
-      req.flash('success', post.create.success)
+      req.flash('success', postsString.create.success)
       // Redirect to the article page after successfully posting
       res.redirect(`/posts/${post._id}`)
     })
@@ -55,9 +63,23 @@ router.get('/create', checkLogin, function (req, res, next) {
 
 // GET /posts/:postId Single article page
 router.get('/:postId', function (req, res, next) {
-  res.write('Article Detail Page: ')
-  res.write(req.params.postId)
-  res.end()
+  const postId = req.params.postId
+
+  Promise.all([
+    PostModel.getPostById(postId), // Get article content
+    PostModel.incPv(postId)// pv plus 1
+  ])
+    .then(function (result) {
+      const post = result[0]
+      if (!post) {
+        throw new Error(postsString.view.error.no_post)
+      }
+
+      res.render('post', {
+        post: post
+      })
+    })
+    .catch(next)
 })
 
 // GET /posts/:postId/edit Update article page

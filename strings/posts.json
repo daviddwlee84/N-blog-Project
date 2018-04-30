@@ -5,5 +5,10 @@
       "no_content": "Please input content"
     },
     "success": "Post successfully"
+  },
+  "view": {
+    "error": {
+      "no_post": "This article does not exist"
+    }
   }
 }

@@ -92,7 +92,8 @@
 * footer.ejs
 
 * signup.ejs
-* posts.ejs - Main page
+* posts.ejs - Main page / User page (Seperate by author in URL)
+* post.ejs - Specific article page
 * signin.ejs
 * create.ejs - Create new post
 
@@ -101,6 +102,7 @@
 * nav.ejs
 * nav-setting.ejs
 * notification.ejs
+* post-content.ejs
 
 ## Function and Router Design
 **#TODO: Follow RESTful API Style**
