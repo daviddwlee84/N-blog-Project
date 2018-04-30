@@ -85,6 +85,7 @@
 ### ./strings - String files
 
 * signup.json
+* signout.json
 
 ### ./views - Template files
 
