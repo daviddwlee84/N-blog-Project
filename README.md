@@ -52,12 +52,9 @@
 
 ### ./lib
 
-* mongo.js - MongoLass setting (User model)
-  * name (unique username)
-  * password
-  * avatar
-  * gender
-  * bio
+* mongo.js - MongoDB setting
+  * User Model
+  * Article Model
 
 ### ./middlewares - Custom middlewares
 
