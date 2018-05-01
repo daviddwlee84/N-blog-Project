@@ -88,6 +88,7 @@
 * signout.json
 * signin.json
 * posts.json (create, edit, delete share string in post)
+* comments.json
 
 ### ./views - Template files
 

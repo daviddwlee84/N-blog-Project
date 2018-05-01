@@ -1,0 +1,15 @@
+{
+  "create": {
+    "error": {
+      "no_content": "Please input content"
+    },
+    "success": "Create comment successfully"
+  },
+  "delete": {
+    "error": {
+      "no_comment": "The comment does not exist",
+      "not_author": "You have no authority to delete the comment"
+    },
+    "success": "Delete comment successfully"
+  }
+}
