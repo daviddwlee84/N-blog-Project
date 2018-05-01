@@ -2,6 +2,8 @@ const express = require('express')
 const router = express.Router()
 
 const PostModel = require('../models/posts')
+const CommentModel = require('../models/comments')
+
 const postsString = require('../strings/posts.json')
 
 const checkLogin = require('../middlewares/check').checkLogin
@@ -67,16 +69,19 @@ router.get('/:postId', function (req, res, next) {
 
   Promise.all([
     PostModel.getPostById(postId), // Get article content
+    CommentModel.getComments(postId), // Get all comment of the article
     PostModel.incPv(postId)// pv plus 1
   ])
     .then(function (result) {
       const post = result[0]
+      const comments = result[1]
       if (!post) {
         throw new Error(postsString.view.error.no_post)
       }
 
       res.render('post', {
-        post: post
+        post: post,
+        comments: comments
       })
     })
     .catch(next)

@@ -65,6 +65,7 @@
 
 * users.js
 * posts.js
+* comments.js
 
 ### ./public - Static files (e.g. CSS, images)
 
@@ -106,6 +107,7 @@
 * nav-setting.ejs
 * notification.ejs
 * post-content.ejs
+* comments.ejs
 
 ## Function and Router Design
 **#TODO: Follow RESTful API Style**
