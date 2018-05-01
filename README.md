@@ -85,6 +85,7 @@
 * signup.json
 * signout.json
 * signin.json
+* posts.json (create, edit, delete share string in post)
 
 ### ./views - Template files
 
@@ -96,6 +97,7 @@
 * post.ejs - Specific article page
 * signin.ejs
 * create.ejs - Create new post
+* edit.ejs
 
 #### ./views/components - Reusable template fragments
 

@@ -1,5 +1,5 @@
 {
-  "create": {
+  "post": {
     "error": {
       "no_title": "Please input title",
       "no_content": "Please input content"
@@ -10,5 +10,15 @@
     "error": {
       "no_post": "This article does not exist"
     }
+  },
+  "edit": {
+    "error": {
+      "no_post": "This article does not exist",
+      "not_author": "You have no authority to access"
+      },
+    "success": "Edit successfully"
+  },
+  "delete": {
+    "success": "Delete successfully"
   }
 }
