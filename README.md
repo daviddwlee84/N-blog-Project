@@ -55,6 +55,7 @@
 * mongo.js - MongoDB setting
   * User Model
   * Article Model
+  * Comment Model
 
 ### ./middlewares - Custom middlewares
 
