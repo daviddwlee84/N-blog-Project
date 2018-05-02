@@ -72,6 +72,11 @@
 #### ./public/css - Cascading style sheets
 
 * style.css
+* 404.css
+
+### ./public/js - Front-end JS code
+
+* 404.js
 
 ### ./routes - Routing files
 
@@ -101,6 +106,8 @@
 * signin.ejs
 * create.ejs - Create new post
 * edit.ejs
+
+* 404.ejs
 
 #### ./views/components - Reusable template fragments
 
@@ -179,3 +186,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 * [Tom Chang](https://github.com/trylovetom)
 * [N-blog](https://github.com/nswbmw/N-blog)
+* [404 Page Template](https://codepen.io/Ahmed_B_Hameed/pen/LkqNmp)
