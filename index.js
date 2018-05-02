@@ -56,6 +56,13 @@ app.use(require('express-formidable')({
 // Router
 routes(app)
 
+// Show error message in notification bar instead of showing on whole page
+app.use(function (err, req, res, next) {
+  console.error(err)
+  req.flash('error', err.message)
+  res.redirect('/posts')
+})
+
 if (module.parent) {
   module.exports = app
 } else {
