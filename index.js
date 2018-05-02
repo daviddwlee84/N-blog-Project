@@ -8,6 +8,10 @@ const config = require('./config/default')
 const routes = require('./routes')
 const pkg = require('./package')
 
+// For log
+const winston = require('winston')
+const expressWinston = require('express-winston')
+
 const app = express()
 
 // Setting directory of default template files.
@@ -53,8 +57,32 @@ app.use(require('express-formidable')({
   keepExtensions: true // Keep filename exentsion (e.g. *.jpeg, *.png)
 }))
 
+// Normal request log
+app.use(expressWinston.logger({
+  transports: [
+    new (winston.transports.Console)({
+      json: true,
+      colorize: true
+    }),
+    new winston.transports.File({
+      filename: 'logs/success.log'
+    })
+  ]
+}))
 // Router
 routes(app)
+// Error request log
+app.use(expressWinston.errorLogger({
+  transports: [
+    new winston.transports.Console({
+      json: true,
+      colorize: true
+    }),
+    new winston.transports.File({
+      filename: 'logs/error.log'
+    })
+  ]
+}))
 
 // Show error message in notification bar instead of showing on whole page
 app.use(function (err, req, res, next) {
