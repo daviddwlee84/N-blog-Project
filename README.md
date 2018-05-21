@@ -174,6 +174,13 @@
 
 * [EditorConfig](http://editorconfig.org) - Maintain consistent coding style
 
+## TODO
+
+- [ ] Finish all unit test
+- [ ] Connect to CI server (Add embedding status image)
+- [ ] Build Docker
+- [ ] Setup CD and deploy on a cloud server
+
 ## Author
 
 * David Lee
